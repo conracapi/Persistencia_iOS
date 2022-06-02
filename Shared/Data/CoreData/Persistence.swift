@@ -191,6 +191,7 @@ extension PersistenceController: PersistenceControllerProtocol {
         }
     }
     
+    //
     func deleteAlbumOfBand(albumIds: [String], completionHandler: @escaping (([String]) -> Void)) {
         container.performBackgroundTask { privateMOC in
             let request: NSFetchRequest<NSFetchRequestResult> = CDAlbum.fetchRequest()
@@ -206,7 +207,7 @@ extension PersistenceController: PersistenceControllerProtocol {
         }
     }
     
-    
+    //
     func deleteAllAlbumsOfBand(completionHandler: @escaping (() -> Void)) {
         container.performBackgroundTask { privateMOC in
             let request: NSFetchRequest<NSFetchRequestResult> = CDAlbum.fetchRequest()
